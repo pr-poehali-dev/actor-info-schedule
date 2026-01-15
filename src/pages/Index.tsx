@@ -181,15 +181,11 @@ const Index = () => {
               <div className="flex flex-wrap gap-3 pt-4">
                 <Badge variant="secondary" className="px-4 py-2 text-sm">
                   <Icon name="Film" size={16} className="mr-2" />
-                  100+ ролей в кино
+                  100+ ролей
                 </Badge>
                 <Badge variant="secondary" className="px-4 py-2 text-sm">
-                  <Icon name="Tv" size={16} className="mr-2" />
-                  Сериалы и фильмы
-                </Badge>
-                <Badge variant="secondary" className="px-4 py-2 text-sm">
-                  <Icon name="Theater" size={16} className="mr-2" />
-                  Театр и сцена
+                  <Icon name="Heart" size={16} className="mr-2" />
+                  Признание тысяч фанатов
                 </Badge>
               </div>
             </div>
