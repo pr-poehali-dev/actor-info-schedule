@@ -10,6 +10,48 @@ import Icon from '@/components/ui/icon';
 const Index = () => {
   const [activeSection, setActiveSection] = useState('bio');
 
+  const projects = [
+    {
+      title: 'Анна Каренина',
+      platform: 'Культура.РФ',
+      url: 'https://www.culture.ru',
+      type: 'Спектакль',
+      year: '2025'
+    },
+    {
+      title: 'Чайка',
+      platform: 'Театр HD',
+      url: 'https://www.theatre-hd.ru',
+      type: 'Запись спектакля',
+      year: '2024'
+    },
+    {
+      title: 'Интервью с актрисой',
+      platform: 'YouTube',
+      url: 'https://youtube.com',
+      type: 'Интервью',
+      year: '2025'
+    }
+  ];
+
+  const videos = [
+    {
+      title: 'Монолог из "Анна Каренина"',
+      thumbnail: 'https://cdn.poehali.dev/projects/91e96537-db68-4138-83a5-e56ba86c5b8c/files/1008c503-333e-48f1-826e-2a1bf972562a.jpg',
+      duration: '3:24'
+    },
+    {
+      title: 'За кулисами: Подготовка к спектаклю',
+      thumbnail: 'https://cdn.poehali.dev/projects/91e96537-db68-4138-83a5-e56ba86c5b8c/files/1008c503-333e-48f1-826e-2a1bf972562a.jpg',
+      duration: '5:12'
+    },
+    {
+      title: 'Премьера "Три сестры"',
+      thumbnail: 'https://cdn.poehali.dev/projects/91e96537-db68-4138-83a5-e56ba86c5b8c/files/1008c503-333e-48f1-826e-2a1bf972562a.jpg',
+      duration: '4:45'
+    }
+  ];
+
   const performances = [
     {
       date: '15 февраля 2026',
@@ -81,6 +123,8 @@ const Index = () => {
               {[
                 { id: 'bio', label: 'Биография', icon: 'User' },
                 { id: 'schedule', label: 'Гастроли', icon: 'Calendar' },
+                { id: 'projects', label: 'Проекты', icon: 'Film' },
+                { id: 'videos', label: 'Видео', icon: 'Video' },
                 { id: 'reviews', label: 'Отзывы', icon: 'Star' },
                 { id: 'contacts', label: 'Контакты', icon: 'Mail' }
               ].map((item) => (
@@ -108,7 +152,7 @@ const Index = () => {
             <div className="relative">
               <div className="absolute -inset-4 bg-primary/20 rounded-lg blur-xl" />
               <img
-                src="/placeholder.svg"
+                src="https://cdn.poehali.dev/projects/91e96537-db68-4138-83a5-e56ba86c5b8c/files/1008c503-333e-48f1-826e-2a1bf972562a.jpg"
                 alt="Елена Театрова"
                 className="relative rounded-lg shadow-2xl w-full aspect-[3/4] object-cover border-2 border-primary/50"
               />
@@ -219,6 +263,95 @@ const Index = () => {
                         Купить билеты
                       </Button>
                     )}
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {activeSection === 'projects' && (
+        <section className="container mx-auto px-4 py-16 animate-fade-in">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-5xl font-bold mb-4 text-primary">Проекты</h2>
+              <p className="text-xl text-muted-foreground">
+                Где посмотреть выступления Елены Театровой
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              {projects.map((project, idx) => (
+                <Card key={idx} className="border-primary/30 hover:border-primary/60 transition-all group">
+                  <CardHeader>
+                    <div className="flex items-start justify-between">
+                      <div className="space-y-2">
+                        <CardTitle className="text-xl group-hover:text-primary transition-colors">
+                          {project.title}
+                        </CardTitle>
+                        <CardDescription className="flex items-center gap-2">
+                          <Icon name="Film" size={16} className="text-primary" />
+                          {project.type} • {project.year}
+                        </CardDescription>
+                      </div>
+                      <Badge variant="outline" className="border-primary/50">
+                        {project.platform}
+                      </Badge>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <a 
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block"
+                    >
+                      <Button className="w-full bg-primary hover:bg-primary/90">
+                        <Icon name="ExternalLink" size={18} className="mr-2" />
+                        Смотреть на {project.platform}
+                      </Button>
+                    </a>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {activeSection === 'videos' && (
+        <section className="container mx-auto px-4 py-16 animate-fade-in">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-5xl font-bold mb-4 text-primary">Видео</h2>
+              <p className="text-xl text-muted-foreground">
+                Избранные моменты и записи спектаклей
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              {videos.map((video, idx) => (
+                <Card key={idx} className="border-primary/30 hover:border-primary/60 transition-all overflow-hidden group cursor-pointer">
+                  <div className="relative">
+                    <img 
+                      src={video.thumbnail}
+                      alt={video.title}
+                      className="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-all flex items-center justify-center">
+                      <div className="w-16 h-16 rounded-full bg-primary/90 flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <Icon name="Play" size={28} className="text-primary-foreground ml-1" />
+                      </div>
+                    </div>
+                    <Badge className="absolute bottom-3 right-3 bg-black/80">
+                      {video.duration}
+                    </Badge>
+                  </div>
+                  <CardContent className="pt-4">
+                    <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors">
+                      {video.title}
+                    </h3>
                   </CardContent>
                 </Card>
               ))}
