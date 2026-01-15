@@ -118,7 +118,7 @@ const Index = () => {
       <nav className="sticky top-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <h1 className="text-3xl font-bold text-primary">Елена Театрова</h1>
+            <h1 className="text-3xl font-bold text-primary">Екатерина Волкова</h1>
             <div className="flex gap-6">
               {[
                 { id: 'bio', label: 'Биография', icon: 'User' },
@@ -153,7 +153,7 @@ const Index = () => {
               <div className="absolute -inset-4 bg-primary/20 rounded-lg blur-xl" />
               <img
                 src="https://cdn.poehali.dev/projects/91e96537-db68-4138-83a5-e56ba86c5b8c/files/1008c503-333e-48f1-826e-2a1bf972562a.jpg"
-                alt="Елена Театрова"
+                alt="Екатерина Волкова"
                 className="relative rounded-lg shadow-2xl w-full aspect-[3/4] object-cover border-2 border-primary/50"
               />
               <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-secondary/30 rounded-full blur-2xl" />
@@ -161,36 +161,35 @@ const Index = () => {
             
             <div className="space-y-6">
               <div>
-                <h2 className="text-5xl font-bold mb-2 text-primary">Елена Театрова</h2>
-                <p className="text-xl text-muted-foreground">Заслуженная артистка России</p>
+                <h2 className="text-5xl font-bold mb-2 text-primary">Екатерина Волкова</h2>
+                <p className="text-xl text-muted-foreground">Актриса театра и кино</p>
               </div>
               
               <Separator className="bg-primary/30" />
               
               <div className="space-y-4 text-foreground/90">
                 <p className="text-lg leading-relaxed">
-                  Елена Театрова — выдающаяся российская актриса театра и кино с 20-летним стажем. 
+                  Екатерина Волкова — актриса театра и кино, за спиной которой больше 100 ролей в кино и сериалах. 
                   Её талант и преданность искусству покорили сердца миллионов зрителей по всей стране.
                 </p>
                 <p className="text-lg leading-relaxed">
-                  Выпускница ГИТИСа, лауреат премии "Золотая маска", обладательница множества 
-                  театральных наград. Известна своими глубокими психологическими ролями и 
-                  способностью передавать тончайшие эмоциональные нюансы.
+                  Яркая, талантливая, многогранная, она с легкостью покоряет сердца зрителей, 
+                  воплощая на экране и сцене самых разных персонажей.
                 </p>
               </div>
 
               <div className="flex flex-wrap gap-3 pt-4">
                 <Badge variant="secondary" className="px-4 py-2 text-sm">
-                  <Icon name="Award" size={16} className="mr-2" />
-                  Золотая маска
+                  <Icon name="Film" size={16} className="mr-2" />
+                  100+ ролей в кино
                 </Badge>
                 <Badge variant="secondary" className="px-4 py-2 text-sm">
-                  <Icon name="Trophy" size={16} className="mr-2" />
-                  20+ лет на сцене
+                  <Icon name="Tv" size={16} className="mr-2" />
+                  Сериалы и фильмы
                 </Badge>
                 <Badge variant="secondary" className="px-4 py-2 text-sm">
                   <Icon name="Theater" size={16} className="mr-2" />
-                  50+ главных ролей
+                  Театр и сцена
                 </Badge>
               </div>
             </div>
@@ -204,7 +203,7 @@ const Index = () => {
             <div className="text-center mb-12">
               <h2 className="text-5xl font-bold mb-4 text-primary">Расписание гастролей</h2>
               <p className="text-xl text-muted-foreground">
-                Ближайшие спектакли с участием Елены Театровой
+                Ближайшие спектакли с участием Екатерины Волковой
               </p>
             </div>
 
@@ -277,7 +276,7 @@ const Index = () => {
             <div className="text-center mb-12">
               <h2 className="text-5xl font-bold mb-4 text-primary">Проекты</h2>
               <p className="text-xl text-muted-foreground">
-                Где посмотреть выступления Елены Театровой
+                Где посмотреть выступления Екатерины Волковой
               </p>
             </div>
 
@@ -366,7 +365,7 @@ const Index = () => {
             <div className="text-center mb-12">
               <h2 className="text-5xl font-bold mb-4 text-primary">Отзывы зрителей</h2>
               <p className="text-xl text-muted-foreground">
-                Что говорят о выступлениях Елены
+                Что говорят о выступлениях Екатерины
               </p>
             </div>
 
@@ -475,7 +474,7 @@ const Index = () => {
         <div className="container mx-auto px-4 py-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-muted-foreground">
-              © 2026 Елена Театрова. Все права защищены.
+              © 2026 Екатерина Волкова. Все права защищены.
             </p>
             <div className="flex gap-6">
               <a href="#" className="text-primary hover:text-primary/80 transition-colors">
